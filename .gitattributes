@@ -1,0 +1,4 @@
+*.shp binary
+*.shx binary
+src/ export-ignore
+Makefile export-ignore
