@@ -1,0 +1,36 @@
+<OGRVRTDataSource>
+ <OGRVRTWarpedLayer>
+  <OGRVRTLayer name="detailed_analysis_units">
+    <SrcDataSource relativeToVRT="1">dau_v2_105.shp</SrcDataSource>
+    <SrcLayer>dau_v2_105</SrcLayer>
+    <Field name="dau_code" src="DAU_CODE" type="STRING"/>
+    <Field name="dau_name" src="DAU_NAME" type="STRING"/>
+    <Field name="psa_code" src="PSA_CODE" type="STRING"/>
+    <Field name="psa_name" src="PSA_NAME" type="STRING"/>
+    <Field name="hr_code" src="HR_CODE" type="STRING"/>
+    <Field name="hr_name" src="HR_NAME" type="STRING"/>
+    <Field name="duaid_code" src="DAUID_CODE" type="STRING"/>
+    <Field name="pa_no" src="PA_NO" type="Integer"/>
+  </OGRVRTLayer>
+<TargetSRS>epsg:3310</TargetSRS>
+</OGRVRTWarpedLayer>
+
+<!-- 
+ <OGRVRTWarpedLayer>
+  <OGRVRTLayer name="dau_ll">
+    <SrcDataSource relativeToVRT="1">dau_v2_105.shp</SrcDataSource>
+    <SrcLayer>dau_v2_105</SrcLayer>
+    <Field name="dau_code" src="DAU_CODE" type="STRING"/>
+    <Field name="dau_name" src="DAU_NAME" type="STRING"/>
+    <Field name="psa_code" src="PSA_CODE" type="STRING"/>
+    <Field name="psa_name" src="PSA_NAME" type="STRING"/>
+    <Field name="hr_code" src="HR_CODE" type="STRING"/>
+    <Field name="hr_name" src="HR_NAME" type="STRING"/>
+    <Field name="duaid_code" src="DAUID_CODE" type="STRING"/>
+    <Field name="pa_no" src="PA_NO" type="Integer"/>
+  </OGRVRTLayer>
+<TargetSRS>WGS84</TargetSRS>
+</OGRVRTWarpedLayer>
+-->
+
+</OGRVRTDataSource>
