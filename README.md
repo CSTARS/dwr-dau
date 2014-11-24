@@ -20,6 +20,7 @@ Regions (HR).
 
 We use a subset of the attributes supplied in the original file
 
+Attribute | Description
 --- | ---
 dau_code | The DAU code (3 character string) of the delineated area
 dau_name | The DAU name (character string) of the delineated area
