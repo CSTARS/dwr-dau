@@ -1,14 +1,4 @@
-# California DWR Detailed Analysis Units (2003)
-
-In the past DWR has maintained a listing of California's Detailed
-Analysis Units (DAUs) used by the state for water planning.  While
-still avialable, this data is harder to find online.  This repository
-maintains a copy of the dau original source files, as well as a few
-alternate formats.
-
-This dataset is the DWR Version 20, December 2003.
-
-## Overview
+# California DWR Detailed Analysis Units (2012)
 
 The Department of Water Resources (DWR) uses Detailed Analysis Units (DAU) as 
 the base geographic unit for most statewide planning purposes.  There are 278 
@@ -16,9 +6,7 @@ DAU's that cover all of mainland California.  The DAU's are nested inside 46
 Planning Subareas (PSA), which in turn are nested inside of 10 Hydrologic 
 Regions (HR). 
 
-## Attributes
-
-We use a subset of the attributes supplied in the original file
+We use a subset of the attributes supplied in the original source data.
 
 Attribute | Description
 --- | ---
@@ -31,8 +19,60 @@ hr_name	| The HR name (character string) of the HR encompassing the delineated a
 dauid_code | The DAU identification code (8 character string), which is a concatenation of the HR_CODE, PSA_CODE, and DAU_CODE.   
 pa_no | The California Planning Update area number (6 character number).
 
+The most current version of the DAU's were supplied by the *California
+Department of Forestry and Fire Protection*.  Please see the ```src```
+directory for a copy of that data.  The intent of this repository is
+to; provide a discoverable location for the data, provide a geojson
+format, and standardize the dataset from update to update.
 
-## Process
+
+# Updates 
+
+## 2012 Deatail County update.
+
+Detailed Analysis Unit-DAU Convergence via County Boundary cnty24k09,
+(*See metadata for cnty24k09, Cal-Atlas), State of California. The
+existing DAU boundaries were clipped via Cal-Atlas cnty24k09 by
+Michael L. Serna, NRO via ArcMap 10. DAU’s were sent out to: Northern
+Region Office (NRO), North Central Region Office (NCRO), South Central
+Region Office (SCRO) and Southern Region Office (SRO)
+respectively. Collaboration was by Department of Water Resources,
+Region Office personnel, Michael L. Serna, NRO, Jason Harbaugh - NCRO,
+Cynthia Moffett - SCRO and Robert Fastenau - SRO with the final merge
+of all data into a cohesive workable dataset completed by Michael
+L. Serna - NRO, Land and Water Use Section.
+
+Existing DAU feature class boundaries contained a multitude of variant
+sliver acreages along all DAU and county boundary lines through-out
+the State of California.Each region office was sent their respective
+‘clipped’ features where they ‘exploded’ each county to expose the
+DAU’s sliver anomalies. They subsequently merged the variant slivers
+into the proper DAUs. Upon completion, the DAU feature classes were
+sent back to Michael L. Serna, NRO where they were merged back
+together, ‘Unioned’ to the cnty24k09 State Boundary and ‘exploded’ to
+expose DAU/State of California boundary slivers. These features are
+reachable by County\DAU. This allows the county boundaries, the DAU
+boundaries and the State of California Boundary to match Cal-Atlas
+cnty24k09.
+
+Extremely detailed descriptions of boundary changes made for different
+versions are provided in the Process Step metadata section. More
+general version notes are provided here;
+
+Please see the metadata file in the src directory for more
+information.
+
+## California DWR Detailed Analysis Units (2003)
+
+In the past DWR has maintained a listing of California's Detailed
+Analysis Units (DAUs) used by the state for water planning.  While
+still avialable, this data is harder to find online.  This repository
+maintains a copy of the dau original source files, as well as a few
+alternate formats.
+
+This dataset is the DWR Version 20, December 2003.
+
+### Process
 
 1.  DWR used, as a starting point, the vector data from Calwater 2.0.  This 
 vector data was provided to all four DWR District Offices.  Each District 
